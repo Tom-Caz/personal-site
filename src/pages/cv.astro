@@ -1,18 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import TimeLineBullet from "../components/cv/TimeLineBullet.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
-
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="text-5xl w-full font-bold">Thomas Cazort</div>
   </div>
 
   <div class="mb-5">
@@ -21,12 +15,18 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="The University of Southern California"
+      subtitle="B.S in Computer Science"
+      start="August 2023"
+      end="Present"
+      description="Viterbi School of Engineering, Los Angeles CA"
     />
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
+      title="The University of Memphis"
+      subtitle="B.S. in Computer Science"
+      start="August 2020"
+      end="May 2023"
+      description="College of Arts and Sciences, Memphis TN"
     />
   </div>
 
@@ -35,58 +35,84 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="time-line-container mb-10">
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
-    <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-    >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
+    <TimeLineBullet
+      title="Youdle"
+      subtitle="Software Engineer"
+      start="May 2023"
+      end="Present"
+      bullets={["Created and published a Shopify sales channel app, enabling synchronization between multiple stores’ inventory and Youdle's Supabase database.", 
+      "Developed GraphQL queries in Typescript to connect and retrieve information from Shopify.",
+      "Contributed to the transition from Django to Next.js by converting key REST API functions."]}
+      />
+    <TimeLineBullet
+      title="The University of Memphis"
+      subtitle="Undergradute Researcher"
+      start="January 2023"
+      end="August 2023"
+      bullets={["Research Experience for Undergraduates (REU) under Dr. Deepak Venugopal focusing on fairness in machine-learning model feature selection.",
+                "Utilized PyTorch, Tensorflow, Keras, and Pandas to train models and analyze fairness."]}
+    />
+    <TimeLineBullet
+      title="International Paper"
+      subtitle="Connectivity Solutions Engineering Inten"
+      start="May 2022"
+      end="August 2022"
+      bullets={["Implemented a code automation and deployment tool that saves ~1000 hours per year.",
+                "Designed a user interface that allows developers to efficiently create, update, and delete change requests stored in a SQL database.",
+                "Led a team of 3 interns to win the ‘Most Innovative Solution’ award in the intern hackathon."]}
+    />
+    <TimeLineBullet
+      title="The University of Memphis"
+      subtitle="Undergraduate Teaching Assistant"
+      start="September 2021"
+      end="December 2021"
+      bullets={["Supported a professor in teaching the Intro to Python and Discrete Mathematics course.",
+                "Provided a solid understanding of Python programming fundamentals, algorithmic complexity, data structures, etc.",]}
+    />
   </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
-  </div>
-
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
+  <table class="table">
+    <thead>
+      <tbody>
+        <tr class="text-center">
+          <th class="text-lg font-semibold text-left bg-primary">Programming</th>
+          <th>Python</th>
+          <th>Typescript</th>
+          <th>Javascript</th>
+          <th>Node.js</th>
+          <th>Java</th>
+          <th>Ruby</th>
+        </tr>
+        <tr class="text-center">
+          <th class="text-lg font-semibold text-left bg-primary">Web & Databases</th>
+          <th>React</th>
+          <th>Tailwind</th>
+          <th>Next.js</th>
+          <th>SQL</th>
+          <th>Supabase</th>
+          <th>Prisma</th>
+        </tr>
+        <tr class="text-center">
+          <th class="text-lg font-semibold text-left bg-primary">Data Science</th>
+          <th>Pandas</th>
+          <th>NumPy</th>
+          <th>Scikit-Learn</th>
+          <th>Tensorflow</th>
+          <th>PyTorch</th>
+          <th>Keras</th>
+        </tr>
+        <tr class="text-center">
+          <th class="text-lg font-semibold text-left bg-primary">Technologies</th>
+          <th>REST APIs</th>
+          <th>GraphQL</th>
+          <th>Git</th>
+          <th>AWS</th>
+          <th>Unix</th>
+          <th>Azure DevOps</th>
+        </tr>
+      </tbody>
+  </table>
 </BaseLayout>
