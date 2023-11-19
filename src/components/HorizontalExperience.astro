@@ -1,5 +1,14 @@
 ---
-const { title, subtitle, img, desc, url, duration, tags, target = "_blank" } = Astro.props;
+const {
+  title,
+  subtitle,
+  img,
+  desc,
+  url,
+  duration,
+  tags,
+  target = "_blank",
+} = Astro.props;
 import { Image } from "@astrojs/image/components";
 ---
 
@@ -23,12 +32,12 @@ import { Image } from "@astrojs/image/components";
       }
       <div class="grow w-full">
         <div class="flow-root">
-        <h1 class="text-xl font-bold float-left">
-          {title}
-        </h1>
-        <span class="float-right">{duration}</span>
-    </div>
-        
+          <h1 class="text-xl font-bold float-left">
+            {title}
+          </h1>
+          <span class="float-right">{duration}</span>
+        </div>
+
         <div>
           <span class="text-xl mr-1"> {subtitle}</span>
         </div>
@@ -36,7 +45,11 @@ import { Image } from "@astrojs/image/components";
         <div class="card-actions justify-end">
           {
             tags &&
-              tags.map((tag) => <div class="badge badge-secondary badge-outline">{tag}</div>)
+              tags.map((tag) => (
+                <div class="badge bg-secondary badge-primary badge-outline">
+                  {tag}
+                </div>
+              ))
           }
         </div>
       </div>

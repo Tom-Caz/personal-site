@@ -29,7 +29,11 @@ import { Image } from "@astrojs/image/components";
         <div class="card-actions justify-end">
           {
             tags &&
-              tags.map((tag) => <div class="badge badge-outline badge-secondary">{tag}</div>)
+              tags.map((tag) => (
+                <div class="badge bg-secondary badge-primary badge-outline">
+                  {tag}
+                </div>
+              ))
           }
         </div>
       </div>

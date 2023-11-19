@@ -1,93 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalExperience from "../components/HorizontalExperience.astro";
+import Title from "../components/mainComponents/Title.astro";
+import WorkXP from "../components/mainComponents/WorkXP.astro";
+import Education from "../components/mainComponents/Education.astro";
+import Projects from "../components/mainComponents/Projects.astro";
 ---
 
-<BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-5xl font-bold">Thomas Cazort</div>
-    <div class="text-3xl py-3 font-bold">Full-Stack Software Engineer</div>
-    <div class="py-2">
-      <text class="text-lg">
-        Hello! I'm Thomas Cazort. I am currently a <b>Software Engineer</b> at <b
-          >Youdle</b
-        >. I am also a grad student at <b
-          >The University of Southern California</b
-        > pursuing my <b>Master's in Computer Science</b>.
-      </text>
-    </div>
-    <div class="py-2">
-      <text class="text-lg">
-        In my free time, I'm usually rock climbing, biking, exploring the city,
-        or working on my latest project.
-      </text>
-    </div>
-    <div class="mt-8">
-      <a
-        class="btn"
-        href="https://linkedin.com/in/thomascazort337/"
-        target="_blank"
-      >
-        Let's connect!</a
-      >
-      <a href="./Resume.pdf" class="btn btn-outline ml-5"> View my Resume</a>
-    </div>
-  </div>
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Work Experience</div>
-  </div>
-
-  <HorizontalExperience
-    title="Youdle"
-    subtitle="Full-Stack Software Engineer"
-    img="/youdle.png"
-    desc="Fullstack Software Engineer focused on integrating small businesses into Youdle's product search via Shopify."
-    url="https://www.youdleit.com/"
-    duration="Jan 2023 - Present"
-    tags={["Typescript", "NextJS", "React", "Supabase"]}
-  />
-  <div class="divider my-0"></div>
-  <HorizontalExperience
-    title="The University of Memphis"
-    subtitle="Undergraduate Researcher"
-    duration="Jan 2023 - Aug 2023"
-    img="/UofM.jpg"
-    desc="Research Experience for Undergraduates (REU) under Dr. Deepak Venugopal focusing on fairness in machine-learning model feature selection"
-    url="https://www.memphis.edu/cs/"
-    tags={["Python", "Pandas", "Tensorflow", "PyTorch"]}
-  />
-  <div class="divider my-0"></div>
-  <HorizontalExperience
-    title="International Paper"
-    subtitle="Connectivity Software Engineer - Intern"
-    img="/IP.png"
-    desc="Implemented a code automation and deployment tool that saves ~1000 hours per year"
-    url="https://www.internationalpaper.com/"
-    duration="May 2022 - Aug 2022"
-    tags={["Javascript", "HTML", "CSS"]}
-  />
-  <div class="divider my-0"></div>
-  <div class="p-5"></div>
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Education</div>
-  </div>
-
-  <HorizontalExperience
-    title="University of Southern California"
-    subtitle="M.S. in Computer Science"
-    img="/viterbi.jpeg"
-    desc="Viterbi School of Engineering"
-    url="https://www.cs.usc.edu/"
-    duration="Expected Graduation, May 2025"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalExperience
-    title="University of Memphis"
-    subtitle="B.S. in Computer Science"
-    img="/UofM.jpg"
-    desc="College of Arts and Sciences"
-    url="https://www.memphis.edu/cs/"
-    duration="August 2020 - May 2023"
-  />
+<BaseLayout>
+  <Title ref="Title" />
+  <WorkXP ref="WorkXP" />
+  <div class="divider p-5"></div>
+  <Education ref="Education" />
+  <div class="divider p-5"></div>
+  <Projects ref="Projects" />
 </BaseLayout>
