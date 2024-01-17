@@ -7,6 +7,7 @@ export interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	ogType?: string;
 }
 
 const { title, description, image = '/LA.jpeg' } = Astro.props;
@@ -24,7 +25,6 @@ const { title, description, image = '/LA.jpeg' } = Astro.props;
 <meta name="description" content={description} />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

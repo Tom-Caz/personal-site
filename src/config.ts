@@ -3,3 +3,6 @@
 
 export const SITE_TITLE = 'Thomas Cazort Portfolio';
 export const SITE_DESCRIPTION = 'Thomas Cazort - Full Stack Engineer';
+export const GENERATE_SLUG_FROM_TITLE = true
+export const TRANSITION_API = true
+
