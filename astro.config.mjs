@@ -9,5 +9,5 @@ import vercel from "@astrojs/vercel/static";
 export default defineConfig({
   site: 'https://thomascazort.dev',
   integrations: [mdx(), sitemap(), tailwind()],
-  adapter: vercel({ webAnalytics: true })
+  adapter: vercel({ webAnalytics: { enabled: true } })
 });
