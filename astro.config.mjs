@@ -10,5 +10,5 @@ export default defineConfig({
   site: 'https://thomascazort.dev',
   integrations: [mdx(), sitemap(), tailwind()],
   output: "server",
-  adapter: vercel({ webAnalytics: true })
+  adapter: vercel({ webAnalytics: { enabled: true } })
 });
