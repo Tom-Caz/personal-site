@@ -16,7 +16,10 @@ fetch('https://misc-h2bni939w-tom-caz.vercel.app/visit',
   })
 }).catch(error => {
  console.error('POST error:', error);
-});
+}).then(response => {
+  console.log('POST response:', response);
+})
+
 ---
 
 <BaseLayout sideBarActiveItemID="home">
