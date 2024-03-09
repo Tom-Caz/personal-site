@@ -4,8 +4,8 @@ import Title from "../components/mainComponents/Title.astro";
 import WorkXP from "../components/mainComponents/WorkXP.astro";
 import Education from "../components/mainComponents/Education.astro";
 import Projects from "../components/mainComponents/Projects.astro";
-console.log(JSON.stringify(Astro));
-fetch('http://localhost:3001/visit',
+
+fetch('https://misc-h2bni939w-tom-caz.vercel.app/visit',
 {
   method: 'POST',
   headers: {
@@ -17,7 +17,6 @@ fetch('http://localhost:3001/visit',
 }).catch(error => {
  console.error('POST error:', error);
 });
-
 ---
 
 <BaseLayout sideBarActiveItemID="home">
