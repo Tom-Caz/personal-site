@@ -4,7 +4,9 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-  <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
+  <li>
+    <a class="py-3 text-base" id="home" href="/">Home</a>
+  </li>
   <li>
     <a class="py-3 text-base" id="workxp" href="/#Work-Experience"
       >Work Experience</a
@@ -29,6 +31,20 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 </ul>
 
 <script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
+console.log('sidebar active item id', sideBarActiveItemID);
+  const activeItemElem = document.getElementById(sideBarActiveItemID);
+  let newItemElem = activeItemElem;
+  activeItemElem && activeItemElem.classList.add(activeClass);
+  function setActiveItem(id) {
+    console.log('setting active item', id);
+    console.log(activeItemElem)
+    newItemElem.classList.remove(activeClass);
+    newItemElem = document.getElementById(id);
+    newItemElem.classList.add(activeClass);
+  }
+  document.getElementById('projects').addEventListener('click', () => setActiveItem('projects'))
+  document.getElementById('education').addEventListener('click', () => setActiveItem('education'))
+  document.getElementById('workxp').addEventListener('click', () => setActiveItem('workxp'))
+  document.getElementById('home').addEventListener('click', () => setActiveItem(sideBarActiveItemID))
 </script>
+
