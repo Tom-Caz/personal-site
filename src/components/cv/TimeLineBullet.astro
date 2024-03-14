@@ -16,7 +16,7 @@ const { title, subtitle, bullets, start, end } = Astro.props;
     <ul class="list-disc px-8 pt-2">
         {
         bullets &&
-            bullets.map((bullet) => <li>{bullet}</li>)
+            bullets.map((bullet) => <li class="sm:text-sm text-xs">{bullet}</li>)
         }
     </ul>
     <p class="my-2 text-justify">
