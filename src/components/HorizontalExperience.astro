@@ -32,18 +32,18 @@ import { Image } from "astro:assets";
         )
       }
       <div class="grow w-full">
-        <div class="flow-root">
-          <h1 class="text-xl font-bold float-left">
+        <div class="flow-root pb-2 sm:pb-0">
+          <h1 class="text-xl font-bold sm:float-left">
             {title}
           </h1>
-          <span class="float-right">{duration}</span>
+          <div class="sm:float-right">{duration}</div>
         </div>
 
         <div>
           <span class="text-xl mr-1"> {subtitle}</span>
         </div>
         <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
+        {tags && <div class="card-actions pt-4 sm:pt-2 sm:justify-end">
           {
             tags &&
               tags.map((tag) => (
@@ -52,7 +52,7 @@ import { Image } from "astro:assets";
                 </div>
               ))
           }
-        </div>
+        </div>}
       </div>
     </div>
   </a>
