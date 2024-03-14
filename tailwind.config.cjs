@@ -1,8 +1,22 @@
+import { fade } from 'astro/virtual-modules/transitions.js';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				fade: 'fadeIn .75s ease-in-out',
+				fadeInSlow: 'fadeIn 1.5s ease-in-out',
+			},
+
+			keyframes: {
+				fadeIn: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+			},
+		},
 	},
 	plugins: [require("@tailwindcss/typography"), require("daisyui")],
 	daisyui: {

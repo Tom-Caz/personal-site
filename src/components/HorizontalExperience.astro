@@ -1,5 +1,6 @@
 ---
 const {
+  id,
   title,
   subtitle,
   img,
@@ -13,6 +14,7 @@ import { Image } from "astro:assets";
 ---
 
 <div
+  id={id}
   class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
   <a href={url} target={target}>
@@ -21,13 +23,11 @@ import { Image } from "astro:assets";
         img && (
           <Image
             src={img}
-            // aspectRatio="16:9"
             width={750}
             height={1}
             format="webp"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
-            // background="white"
           />
         )
       }
@@ -57,3 +57,4 @@ import { Image } from "astro:assets";
     </div>
   </a>
 </div>
+
